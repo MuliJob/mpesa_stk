@@ -19,5 +19,7 @@ class Transaction(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     ip = models.CharField(max_length=200, blank=True, null=True)
 
+    objects = models.Manager()
+
     def __unicode__(self):
         return f"{self.transaction_no}"
